@@ -78,7 +78,6 @@ function PrecioFinal ()
 
 	final = final.toFixed(2);
 
-
 	//salida de los datos procesados.
 	alert("El precio final de los tres productos mas el 'IVA' es: " + final);
 
