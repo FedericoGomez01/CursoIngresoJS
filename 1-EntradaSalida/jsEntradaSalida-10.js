@@ -13,13 +13,13 @@ function mostrarAumento()
 	importe = document.getElementById('txtIdImporte').value;
 	importe = parseInt(importe);
 
-
-	//decremento = importe * 0.25;
-	//resultado = importe - decremento;
+	//decremento = 25/100;
+	decremento = importe * 0.25;
+	resultado = importe - decremento;
 
 	//resultado = importe - (importe * 0.25);
 
-	resultado = importe * 0.75
+	//resultado = importe * 0.75
 
 	document.getElementById('txtIdResultado').value = resultado;
 }
