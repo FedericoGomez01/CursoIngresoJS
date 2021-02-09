@@ -19,7 +19,7 @@ function mostrarAumento()
 
 	//resultado = importe - (importe * 0.25);
 
-	//resultado = importe * 0.75
+	//resultado = importe * 0.75;
 
 	document.getElementById('txtIdResultado').value = resultado;
 }

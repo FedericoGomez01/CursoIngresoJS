@@ -43,8 +43,9 @@ function Circulo ()
 
 	//procesar los datos.
 
-	circunferencia = 2 * 3.14159265359 * radio;
+	//circunferencia = 2 * 3.14159265359 * radio;
 
+	circunferencia = 2 * Math.PI * radio;
 	resultado = circunferencia * 3;
 
 	resultado = resultado.toFixed(2);
