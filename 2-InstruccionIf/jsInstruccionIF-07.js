@@ -1,3 +1,8 @@
+/*
+Gomez Federico 1H
+Ejercicio 7
+*/
+
 function mostrar()
 {
 	var edad;
