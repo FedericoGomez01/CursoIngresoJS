@@ -22,7 +22,7 @@ function mostrar()
 	}
 	else
 	{
-		if(notas > 3 && notas < 9)
+		if(notas > 3)
 		{
 			alert("APROBÓ");
 		}
