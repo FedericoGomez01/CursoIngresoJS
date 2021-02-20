@@ -82,7 +82,7 @@ function mostrar()
 			}
 			else
 			{
-				aumento = 0,1;
+				aumento = 0.1;
 			}
 
 		}

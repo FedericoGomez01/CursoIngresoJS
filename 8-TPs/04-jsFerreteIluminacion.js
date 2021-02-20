@@ -39,6 +39,41 @@ function CalcularPrecio ()
     precio = 35;
     precioFinal = cantidadLamparas * precio;
 
+/*
+    switch (cantidadLamparas) 
+    {
+        case 5:
+            switch (marca) 
+            {
+                case "ArgentinaLuz":
+                    sindescuento = 40;
+                break;
+            
+                default:
+                    sindescuento = 30;
+                break;
+            }
+        break;
+
+        case 4:
+            switch (marca) 
+            {
+                case "ArgentinaLuz":
+                case "FelipeLamparas":
+                    sindescuento = 25;
+                break;
+                default:
+                    sindescuento = 20;
+                break;
+            }
+            break;
+        default:
+            if(cantidadLamparas > 5)
+            {
+
+            }
+    }
+*/
 
     if(cantidadLamparas > 5) // precioFinal= 210    sinDescuento= 105      descuento=105
     {
