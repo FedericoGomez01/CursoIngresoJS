@@ -5,61 +5,113 @@ el precio (validar entre 100 y 300),
 la cantidad de unidades (no puede ser 0 o negativo y no debe superar las 1000 unidades),
 la Marca y el fabricante.
 Se debe Informar al usuario lo siguiente:
-a) Del más barato de los alcohol, la cantidad de unidades y el fabricante
+a) Del más barato de los alcohol, la cantidad de unidades y el fabricante 
 b) Del tipo con mas unidades, el promedio por compra
 c) Cuántas unidades de jabones hay en total
 */
 function mostrar()
 {
-	var productoUno;
-	var productoDos;
-	var productoTres;    
-	var precioUno;
-	var precioDos;
-	var precioTres;
-	var unidadesUno;
-	var unidadesDos;
-	var unidadesTres;
+	var i;
+	
+	var tipoIngresado;
+	var precioIngresado;
+	var cantidadUnidades;
+	var marcaIngresada;
+	var alcoholBarato;
+	var alcoholBaratoFabricante;
+	var alcoholBaratoCantidad;
+	var banderaAlcohol;
+	
+	
+	i=0;
 
+	banderaAlcohol = true;
 
 	//Entrada de datos.
-	productoUno = prompt("Ingrese el primer producto (sin mayuscula): ", "Ej.: alcohol" );
-	preioUno = prompt("Ingrese el precio del primer (sin mayuscula): ", "Ej.:150");
-	unidadesUno = prompt("Ingrese la cantidad de unidades que tiene el primer producto (sin mayus):", "Desde 1 hasta 999");
-
-	productoDos = prompt("Ingrese el segundo producto (sin mayuscula): ", "Ej.: alcohol" );
-	precioDos = prompt("Ingrese el precio del segundo producto (sin mayuscula): ", "Ej.:150");
-	unidadesDos = prompt("Ingrese la cantidad de unidades que tiene el segundo producto (sin mayus):", "Desde 1 hasta 999");
-
-	productoTres = prompt("Ingrese el segundo producto (sin mayuscula): ", "Ej.: alcohol" );
-	precioTres = prompt("Ingrese el precio del segundo producto (sin mayuscula): ", "Ej.:150");
-	unidadesTres = prompt("Ingrese la cantidad de unidades que tiene el segundo producto (sin mayus):", "Desde 1 hasta 999");
-
-
-	//validacion y seleccion.
-
-	if (productoUno, productoDos, productoTres == "alcohol" or "jabon" or "barbijo")
-	
-		if (precioDos, precioDos, precioTres > 100 and <300)
+	while(i<2)
+	{
 
 		
-			if (unidadesUno, unidadesDos, unidadesTres > 0 and < 1000)
+		
+		
 
-				//seleccion de precio
-				if (unidadesUno >= unidadesDos and unidadesTres)
-					alert("");
+		//Validacion tipo
+		tipoIngresado = prompt("Ingrese un prducto de prevención de contagio: 'barbijo', 'alcohol' o 'jabón'");
+		while(isNaN(tipoIngresado) == false || tipoIngresado != 'barbijo' && tipoIngresado != 'alcohol' && tipoIngresado != 'jabon')
+		{
+			tipoIngresado = prompt("Error reingrese el tipo de producto: 'barbijo', 'alcohol' o 'jabón'");
+			tipoIngresado = parseInt(tipoIngresado);
+		}
+
+		// Validacion precio
+		precioIngresado = prompt("Ingrese el precio del producto ingresado:");
+		while(isNaN(precioIngresado) == true || precioIngresado < 100 && precioIngresado > 300)
+		{
+			precioIngresado = prompt("Error reingrese el precio: ");
+			precioIngresado = parseInt(precioIngresado);
+		}
+
+		// Validacion cantidad
+		cantidadUnidades + prompt("Ingrese la cantidad de unidades del producto:");
+		while(isNaN(cantidadUnidades) == false)
+		{
+			cantidadUnidades = prompt("Error reingrese la cantidad de unidades: ");
+			cantidadUnidades = parseInt(cantidadUnidades);
+		}
+
+		// Validacion de Marca
+		marcaIngresada + prompt("Ingrese la marca del producto:");
+		while(isNaN(marcaIngresada) == false)
+		{
+			marcaIngresada = prompt("Error reingrese marca:  ");
+			marcaIngresada = parseInt(marcaIngresada);
+		}
+
+		// Validacion de fabricante
+		fabricante = prompt("Ingrese la fabricante del producto:");
+		while(isNaN(fabricante) == false)
+		{
+			fabricante = prompt("Error reingrese fabricante:  ");
+			fabricante = parseInt(fabricante);
+		}
+
+
+		// Tengo que hacer switch 
+		// Del más barato de los alcohol, la cantidad de unidades y el fabricante
+		/*if(tipoIngresado == "alcohol")
+		{
+			if(precioIngresado < alcoholBarato || banderaAlcohol == true)
+			{
+				alcoholBarato = precioIngresado;
+				console.log(alcoholBarato);
+	
+				alcoholBaratoFabricante = fabricante;
+				alcoholBaratoCantidad = cantidadUnidades;
+				console.log("fabricante "+alcoholBaratoFabricante)
+				console.log("Cantidad "+alcoholBaratoCantidad)
+
+				
+				banderaAlcohol = false;
+			}
+		}*/
+
+		switch (tipoIngresado) 
+		{
+			case "alcohol":
+				alcoholBaratoFabricante = fabricante;
+				alcoholBaratoCantidad = cantidadUnidades;
+				break;
+		
+			default:
+				break;
+		}
+		
 
 
 
 
-
-
-			else
-				alert("las unidades no cumplen los requisitos");
-		else
-			alert("El precio esta fuera de los estandares de estos productos");
-	else 
-		alert("Los productos seleccionados no cumplen con la normativa de seguridad contra el Covid-19");
-
-
+		i=i+1;
+	}
+	
+	alert("La Cantidad del mas barato de los alcohol" + alcoholBaratoCantidad + " y el fabricante es "+ alcoholBaratoFabricante);
 }
